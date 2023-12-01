@@ -11,14 +11,14 @@ const data = fs.readFile("data.txt", "utf-8", (err, result) => {
     let numberArray = [];
     let arrayD = [];
     array.forEach((str) => {
-      const num = str.match(/[0-9]/g)
+      const num = str.match(/([0-9])/g);
 
-      let len = num?.length
+      let len = num?.length;
 
       //console.log(num?.length, num)
 
-      const n2 = num[0] + num[len - 1]
-      arrayD.push(n2)
+      const n2 = num[0] + num[len - 1];
+      arrayD.push(n2);
     });
 
     console.log(arrayD);
